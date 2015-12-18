@@ -141,13 +141,19 @@ Skrypt dopasowujący do odpowiedniego formatu:
 [skrypt](https://github.com/mralexx/nosql/blob/master/script.js)
 
 
-
-Ułożenie po uruchomieniu skryptu:
+Uruchomienie skryptu:
 
 ```sh
 
 load("script.js")
-true
+Ułożenie po uruchomieniu skryptu:
+
+```
+
+Ulożenie po uruchomieniu skryptu:
+
+```sh
+
 db.example.findOne()
 {
         "_id" : ObjectId("56736eb33bf4b4227aef648b"),
