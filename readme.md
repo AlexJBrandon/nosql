@@ -108,7 +108,8 @@ SELECT count(*) FROM IMPORT.RC_2015_01 WHERE edited=false AND score<10;
 
 Operacje na bazie danych MC Donald's w Europie<br>
 Link do bazy:<br>
-[Link](http://www.go2poi.com/partner/download.php?p=mcdonalds&c=navman&f=McDonald%27s%20UK.csv)
+[Link](http://www.go2poi.com/partner/download.php?p=mcdonalds&c=navman&f=McDonald%27s%20UK.csv)<br>
+
 Import bazy:
 
 ```sh
