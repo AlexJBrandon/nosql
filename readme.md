@@ -168,6 +168,14 @@ db.example.findOne()
 
 ```
 
+Dodajemy geo-index:
+
+```sh
+
+db.places.ensureIndex({"loc" : "2dsphere"})
+
+```
+
 Kilka przykładowych zapytań:
 
 ```sh
