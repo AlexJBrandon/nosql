@@ -25,10 +25,12 @@ mongoimport -d zadanie1 -c Zadanie1 --type json --file "E:\RC_2015-01.json"
 
 1:16:30
 
+```
+
 ![alt tag](https://github.com/mralexx/nosql/blob/master/mongo_cpu.png "")
 ![alt tag](https://github.com/mralexx/nosql/blob/master/mongo_disc.png "")
 
-```
+
 
 PosgreSQL:
 
@@ -38,10 +40,12 @@ pgfutter_windows_amd64.exe --pw "alex" json "E:\RC_2015-01.json"
 
 1:35:04
 
+```
+
 ![alt tag](https://github.com/mralexx/nosql/blob/master/pg_cpu.png "")
 ![alt tag](https://github.com/mralexx/nosql/blob/master/pg_disc.png "")
 
-```
+
 
 #Zadanie 1b
 
