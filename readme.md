@@ -146,7 +146,6 @@ Uruchomienie skryptu:
 ```sh
 
 load("script.js")
-Ułożenie po uruchomieniu skryptu:
 
 ```
 
