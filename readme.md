@@ -9,8 +9,8 @@
 CPU: AMD Phenom X6 1090T 3.2 GHz, 3,6 Turbo, 6MB cache<br>
 RAM: 8GB Kingston HyperX 1600MHz<br>
 HDD: 750 GB SATA 6GB/s 7200RPM 64MB cache<br>
-OS: Windows 10 Enterprise Insider Preview 10565 x64
-Postgesql: 9.4 x64
+OS: Windows 10 Enterprise Insider Preview 10565 x64<br>
+Postgesql: 9.4 x64<br>
 Mongodb: 3.0.7 x64
 
 #Zadanie 1a
