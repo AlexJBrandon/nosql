@@ -107,7 +107,8 @@ SELECT count(*) FROM IMPORT.RC_2015_01 WHERE edited=false AND score<10;
 #Zadanie 1d
 
 Operacje na bazie danych MC Donald's w Europie
-
+Link do bazy:
+[Link](http://www.go2poi.com/partner/download.php?p=mcdonalds&c=navman&f=McDonald%27s%20UK.csv)
 Import bazy:
 
 ```sh
@@ -121,7 +122,7 @@ Ułożenie danych po zaimportowaniu danych:
 
 ```sh
 
-> db.xela.findOne()
+db.xela.findOne()
 {
         "_id" : ObjectId("56736eb33bf4b4227aef648b"),
         "coordinate1" : 42.50525,
@@ -134,7 +135,9 @@ Ułożenie danych po zaimportowaniu danych:
 ```
 
 Skrypt dopasowujący do odpowiedniego formatu:
+
 ```sh
+
 var connection = new Mongo();
 var db = connection.getDB('alex');
 var xela = db.xela.find();
@@ -151,9 +154,9 @@ Ułożenie po uruchomieniu skryptu:
 
 ```sh
 
-> load("script.js")
+load("script.js")
 true
-> db.example.findOne()
+db.example.findOne()
 {
         "_id" : ObjectId("56736eb33bf4b4227aef648b"),
         "city" : "ANDORRA",
