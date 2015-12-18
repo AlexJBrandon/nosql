@@ -128,7 +128,7 @@ db.xela.findOne()
 {
         "_id" : ObjectId("56736eb33bf4b4227aef648b"),
         "coordinate1" : 42.50525,
-        "cooordinate2" : 1.52792,
+        "coordinate2" : 1.52792,
         "type" : "MCDONALD'S (MCDRIVE)",
         "adress" : "AD500 ANDORRA LA VELLA",
         "city" : "ANDORRA"
