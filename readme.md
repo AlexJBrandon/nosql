@@ -114,7 +114,7 @@ Import bazy:
 
 ```sh
 
-mongoimport -d alex -c xela --type csv --file "E:\McDonaldUK.csv" --headerline
+mongoimport -d place -c places --type csv --file "E:\McDonaldUK.csv" --headerline
 00:01:39
 
 ```
@@ -123,7 +123,7 @@ Ułożenie danych po zaimportowaniu danych:
 
 ```sh
 
-db.xela.findOne()
+db.places.findOne()
 {
         "_id" : ObjectId("56736eb33bf4b4227aef648b"),
         "coordinate1" : 42.50525,
