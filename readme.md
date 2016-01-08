@@ -188,7 +188,7 @@ db.places.find({ loc: {$near: {$geometry: london}} }).limit(20)
 
 ### 2
 
-MC Donald's w promieniu 0.1 stopnia od Londynu:
+MC Donald's w promieniu 0.1 stopnia od centrum Londynu:
 
 ```sh
 
