@@ -223,8 +223,7 @@ db.places.find({
 
 ### 4
 
-MC Donald's w trójkacie na wschód od Londynu
-
+MC Donald's na obszarze od centrum na wschód od Londynu w potaci trójkata:
 
 
 ```sh
