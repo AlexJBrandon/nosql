@@ -108,8 +108,7 @@ SELECT count(*) FROM IMPORT.RC_2015_01 WHERE edited=false AND score<10;
 
 Operacje na bazie danych MC Donald's w Londynie i okolicach<br>
 <br>
-Link do bazy:<br>
-[Link](http://www.go2poi.com/partner/download.php?p=mcdonalds&c=navman&f=McDonald%27s%20UK.csv)<br>
+
 
 Import bazy:
 
@@ -185,7 +184,7 @@ db.places.find({ loc: {$near: {$geometry: london}} }).limit(20)
 
 ```
 
-[mapa]()
+[mapa](https://github.com/mralexx/nosql/blob/master/1_near.geojson)
 
 ### 2
 
@@ -197,7 +196,7 @@ db.places.find({loc: {$geoWithin: {$center: [[51.5072, 0.1275], 0.10]}}})
 
 ```
 
-[mapa]()
+[mapa](https://github.com/mralexx/nosql/blob/master/2_stopnie.geojson)
 
 ### 3
 
@@ -220,7 +219,7 @@ db.places.find({
 
 ```
 
-[mapa]()
+[mapa](https://github.com/mralexx/nosql/blob/master/3_line.geojson)
 
 ### 4
 
@@ -248,7 +247,7 @@ db.places.find({
 
 ```
 
-[mapa]()
+[mapa](https://github.com/mralexx/nosql/blob/master/4_triangle.geojson)
 
 
 
