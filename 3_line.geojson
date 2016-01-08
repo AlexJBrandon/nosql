@@ -1,0 +1,46 @@
+{
+	"type" : "FeatureCollection",
+	"features" : [
+		{
+	      "type": "Feature",
+	      "properties": {},
+	      "geometry": {
+	        "type": "LineString",
+	        "coordinates": [
+	          [
+	            0.47980,
+	            51.73610
+	          ],
+	          [
+	            0.1275,
+	            51.5072
+	          ]
+	        ]
+	      }
+	   },
+		{
+			"type" : "Feature",
+			"properties" : {},
+			"geometry" : {
+				"city" : "chemsford",
+				"type" : "Point",
+				"coordinates" : [
+					0.47980,
+					51.73610
+				]
+			}
+		},
+		{
+			"type" : "Feature",
+			"properties" : {},
+			"geometry" : {
+				"city" : "london",
+				"type" : "Point",
+				"coordinates" : [
+					0.1275,
+					51.5072
+				]
+			}
+		}
+	]
+}
