@@ -106,7 +106,7 @@ SELECT count(*) FROM IMPORT.RC_2015_01 WHERE edited=false AND score<10;
 
 #Zadanie 1d
 
-Operacje na bazie danych MC Donald's w Europie<br>
+Operacje na bazie danych MC Donald's w Londynie i okolicach<br>
 <br>
 Link do bazy:<br>
 [Link](http://www.go2poi.com/partner/download.php?p=mcdonalds&c=navman&f=McDonald%27s%20UK.csv)<br>
@@ -136,9 +136,7 @@ db.xela.findOne()
 
 ```
 
-Skrypt dopasowujący do odpowiedniego formatu:
-
-[skrypt](https://github.com/mralexx/nosql/blob/master/script.js)
+[scrypt](https://github.com/mralexx/nosql/blob/master/script.js) dopasowujący do odpowiedniego formatu:
 
 
 Uruchomienie skryptu:
@@ -149,7 +147,7 @@ load("script.js")
 
 ```
 
-Ulożenie po uruchomieniu skryptu:
+Uklad rekordów po uruchomieniu skryptu:
 
 ```sh
 
@@ -176,35 +174,73 @@ db.places.ensureIndex({"loc" : "2dsphere"})
 
 ```
 
-Kilka przykładowych zapytań:
+MC Donald's blisko Londynu (ograniczenie 20):
 
 ```sh
 
-var amsterdam = { "type": "Point", "coordinates": [52.36, 4.90] };
-
-db.xela.find({
-loc: {
-$geoWithin: {
-$center: [[amsterdam.coordinates[0], amsterdam.coordinates[1]], 1.25]}}
-}).toArray();
-
-
-var rotterdam = { "type": "Point", "coordinates": [51.92, 4.50] };
-db.xela.find({ loc: { $near: { $geometry: rotterdam }, $maxDistance: 15000 } }).toArray();
-
-var line = {"type": "LineString","coordinates": [[52.36, 4.90], [51.92, 4.50]]}
-db.xela.find({
-loc: {$geoIntersects: {$geometry: line}}
-})).toArray();
+var london = { "type": "Point", "coordinates": [51.5072, 0.1275] };
+db.places.find({ loc: {$near: {$geometry: london}} }).limit(20)
 
 ```
 
+[mapa]()
+
+MC Donald's w promieniu 0.1 stopnia od Londynu:
+
+```sh
+
+db.places.find({loc: {$geoWithin: {$center: [[51.5072, 0.1275], 0.10]}}})
+
+```
+
+[mapa]()
+
+MC Donald's na lini Londyn - Chemsford:
+
+```sh
+
+var line2 = {
+    "type": "LineString",
+    "coordinates": [[51.5072, 0.1275], [51.73610,0.47980]]
+}
+
+db.places.find({
+    loc: {
+        $geoIntersects: {
+            $geometry: line2
+        }
+    }
+}).limit(20)
+
+```
+
+[mapa]()
+
+MC Donald's w trójkacie na wschód od Londynu
 
 
 
+```sh
 
+db.places.find({
+    loc: {
+        $geoWithin: {
+            $geometry: {
+                "type": "Polygon",
+                "coordinates": [[
+                    [51.64477, 0.03845],
+                    [51.50720, 0.12750],
+                    [51.46375,0.11398],
+		        [51.64477, 0.03845]
+                ]]
+            }
+        }
+    }
+}).limit(20)
 
+```
 
+[mapa]()
 
 
 
