@@ -174,6 +174,8 @@ db.places.ensureIndex({"loc" : "2dsphere"})
 
 ```
 
+### 1
+
 MC Donald's blisko Londynu (ograniczenie 20):
 
 ```sh
@@ -185,6 +187,8 @@ db.places.find({ loc: {$near: {$geometry: london}} }).limit(20)
 
 [mapa]()
 
+### 2
+
 MC Donald's w promieniu 0.1 stopnia od Londynu:
 
 ```sh
@@ -194,6 +198,8 @@ db.places.find({loc: {$geoWithin: {$center: [[51.5072, 0.1275], 0.10]}}})
 ```
 
 [mapa]()
+
+### 3
 
 MC Donald's na lini Londyn - Chemsford:
 
@@ -215,6 +221,8 @@ db.places.find({
 ```
 
 [mapa]()
+
+### 4
 
 MC Donald's w trójkacie na wschód od Londynu
 
